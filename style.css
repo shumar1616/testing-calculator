@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.display {
+    margin-bottom: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#display {
+    width: 100%;
+    background: #f0f0f0;
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+    outline: none;
+}
+
+#display:focus {
+    background: #e0e0e0;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.function-btn {
+    background: #667eea;
+    color: white;
+    font-weight: bold;
+}
+
+.function-btn:hover {
+    background: #5568d3;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+.equals {
+    grid-column: span 2;
+    background: #48bb78;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.equals:hover {
+    background: #38a169;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 1.1rem;
+    }
+
+    #display {
+        font-size: 1.5rem;
+        padding: 15px;
+    }
+}
